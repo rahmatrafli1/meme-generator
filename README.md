@@ -1,19 +1,64 @@
-# Getting Started
-Install the dependencies and run the project
-```
+# Meme Generator
+
+A simple React app for creating memes. Enter custom top and bottom captions, then choose a random image from the Imgflip meme template collection.
+
+## Features
+
+- Edit top and bottom captions.
+- Choose a random meme image from the Imgflip API.
+- Preview captions overlaid on the selected image.
+
+## Getting Started
+
+### Tech stack
+
+- React
+- Vite
+- Imgflip API (`https://api.imgflip.com/get_memes`)
+
+### Prerequisites
+
+- Node.js and npm
+- An internet connection to load meme templates from Imgflip
+
+### Installation
+
+```bash
 npm install
-npm start
 ```
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+### Run the development server
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could go further with one of our advanced courses 🚀
+```bash
+npm run dev
+```
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+Open the local URL printed by Vite in your browser.
 
-Happy Coding!
+### Build for production
+
+```bash
+npm run build
+```
+
+To preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Usage
+
+1. Enter text the **Top Text** and **Bottom Text** fields.
+2. Select **Get a new meme image** to display a randomly selected template.
+3. Your captions appear over the image.
+
+## Project Structure
+
+- `App.jsx` — Combines the header and main meme generator.
+- `components/Header.jsx` — Renders the app header and logo.
+- `components/Main.jsx` — Manages caption input, fetches meme templates, and displays the selected image.
+- `index.jsx` — React application entry point.
+- `index.css` — App layout and styling.
+- `index.html` — HTML page loaded by Vite.
+- `images/troll-face.png` — Header logo.
