@@ -1,20 +1,20 @@
 # Meme Generator
 
-A simple React app for creating memes. Enter custom top and bottom captions, then choose a random image from the Imgflip meme template collection.
+A simple React app for creating memes. Add top and bottom captions, then choose a random image from Imgflip's meme template collection.
 
 ## Features
 
-- Edit top and bottom captions.
+- Add top and bottom captions.
 - Choose a random meme image from the Imgflip API.
 - Preview captions overlaid on the selected image.
 
 ## Getting Started
 
-### Tech stack
+### Tech Stack
 
 - React
 - Vite
-- Imgflip API (`https://api.imgflip.com/get_memes`)
+- Imgflip API: `https://api.imgflip.com/get_memes`
 
 ### Prerequisites
 
@@ -27,7 +27,7 @@ A simple React app for creating memes. Enter custom top and bottom captions, the
 npm install
 ```
 
-### Run the development server
+### Run the Development Server
 
 ```bash
 npm run dev
@@ -35,7 +35,7 @@ npm run dev
 
 Open the local URL printed by Vite in your browser.
 
-### Build for production
+### Build for Production
 
 ```bash
 npm run build
@@ -49,16 +49,16 @@ npm run preview
 
 ## Usage
 
-1. Enter text the **Top Text** and **Bottom Text** fields.
-2. Select **Get a new meme image** to display a randomly selected template.
-3. Your captions appear over the image.
+1. Enter captions in the **Top Text** and **Bottom Text** fields.
+2. Click **Get a new meme image** to choose a random template.
+3. Your captions will appear over the image.
 
 ## Project Structure
 
-- `App.jsx` — Combines the header and main meme generator.
-- `components/Header.jsx` — Renders the app header and logo.
-- `components/Main.jsx` — Manages caption input, fetches meme templates, and displays the selected image.
-- `index.jsx` — React application entry point.
-- `index.css` — App layout and styling.
+- `src/App.jsx` — Combines the header and meme generator.
+- `src/components/Header.jsx` — Renders the app header and logo.
+- `src/components/Main.jsx` — Handles caption input, loads meme templates, and displays the selected image.
+- `src/index.jsx` — React application entry point.
+- `src/index.css` — App layout and styling.
 - `index.html` — HTML page loaded by Vite.
-- `images/troll-face.png` — Header logo.
+- `src/images/troll-face.png` — Header logo.
