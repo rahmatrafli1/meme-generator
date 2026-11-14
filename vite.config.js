@@ -1,4 +1,5 @@
 import { defineConfig } from "vite";
+import { coverageConfigDefaults } from "vitest/config";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
@@ -8,6 +9,7 @@ export default defineConfig({
     environment: "jsdom",
     coverage: {
       provider: "istanbul",
+      exclude: ["./src/index.jsx", ...coverageConfigDefaults.exclude],
     },
   },
 });
