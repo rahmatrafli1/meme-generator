@@ -5,6 +5,7 @@ export default function Main() {
     topText: "One does not simply",
     bottomText: "Walk into Mordor",
     imageUrl: "https://i.imgflip.com/1bij.jpg",
+    imageName: "One Does Not Simply",
   });
 
   const [allMemes, setAllMemes] = useState([]);
@@ -60,7 +61,7 @@ export default function Main() {
         <button onClick={getMemeImage}>Get a new meme image 🖼</button>
       </div>
       <div className="meme">
-        <img src={meme.imageUrl} />
+        <img src={meme.imageUrl} alt={meme.imageName} />
         <span className="top">{meme.topText}</span>
         <span className="bottom">{meme.bottomText}</span>
       </div>
