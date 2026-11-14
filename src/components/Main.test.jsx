@@ -9,4 +9,17 @@ describe("Main", () => {
     expect(screen.getByText("Walk into Mordor")).toBeInTheDocument();
     expect(screen.getByRole("img").src).toBe("https://i.imgflip.com/1bij.jpg");
   });
+  test("display meme text inputs and image button", () => {
+    render(<Main />);
+
+    expect(screen.getByText("Top Text")).toBeInTheDocument();
+    expect(screen.getByText("Bottom Text")).toBeInTheDocument();
+    expect(
+      screen.getByPlaceholderText("One does not simply"),
+    ).toBeInTheDocument();
+    expect(screen.getByPlaceholderText("Walk into Mordor")).toBeInTheDocument();
+    expect(
+      screen.getByRole("button", { name: "Get a new meme image 🖼" }),
+    ).toBeInTheDocument();
+  });
 });
