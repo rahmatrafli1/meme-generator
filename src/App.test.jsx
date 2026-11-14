@@ -32,4 +32,23 @@ describe("App component", () => {
     // Assert
     expect(screen.getByText("Code without coffee")).toBeInTheDocument();
   });
+
+  test("displays a new meme image when the button is clicked", async () => {
+    // Arrange
+    const user = userEvent.setup();
+    render(<App />);
+    const button = screen.getByRole("button", {
+      name: "Get a new meme image 🖼",
+    });
+
+    // Act
+    await user.click(button);
+
+    // Assert
+    const memeImage = screen.getAllByRole("img")[1];
+    expect(memeImage).toHaveAttribute(
+      "src",
+      "https://i.imgflip.com/1c1uej.jpg",
+    );
+  });
 });
